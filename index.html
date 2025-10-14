@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Álbuns — Meu Google Photos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      background: #f5f5f5; /* leve tom cinza para o fundo */
+    }
+    h1 { text-align: center; }
+    p { text-align: center; color: #555; }
+
+    ul { list-style: none; padding: 0; display: grid; grid-gap: 20px; }
+    li {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px;
+      flex-wrap: wrap;
+      transition: transform 0.2s;
+    }
+    li:hover { transform: translateY(-2px); } /* efeito leve de hover */
+    .thumb {
+      width: 120px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 6px;
+      flex-shrink: 0;
+      background: #eee;
+    }
+    .info {
+      flex: 1 1 150px;
+    }
+    a.button {
+      padding: 8px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      border: 1px solid #ccc;
+      background: #fafafa;
+      color: #333;
+      white-space: nowrap;
+      transition: background 0.2s;
+    }
+    a.button:hover { background: #eee; }
+
+    /* RESPONSIVO */
+    @media (max-width: 600px) {
+      li {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .thumb {
+        width: 100%;
+        height: auto;
+      }
+      a.button {
+        width: 100%;
+        text-align: center;
+        margin-top: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Álbuns</h1>
+  <p>Abra qualquer álbum clicando no botão abaixo.</p>
+  <ul>
+    <li>
+      <img class="thumb" src="miniaturaPoloTrack2024.jpg" alt="Álbum 1">
+      <div class="info">
+        <strong>Nome do Álbum 1</strong><br>
+        <small>Descrição curta</small>
+      </div>
+      <a class="button" href="https://photos.app.goo.gl/LPXab9yobo3N9tye9" target="_blank" rel="noopener">Abrir álbum</a>
+    </li>
+    <li>
+      <img class="thumb" src="miniaturaCreta2018.jpg" alt="Álbum 2">
+      <div class="info">
+        <strong>Nome do Álbum 2</strong><br>
+        <small>Descrição curta</small>
+      </div>
+      <a class="button" href="https://photos.app.goo.gl/DgA53LmTPLAt5rtU9" target="_blank" rel="noopener">Abrir álbum</a>
+    </li>
+    <!-- adicione mais li para outros álbuns -->
+  </ul>
+</body>
+</html>
