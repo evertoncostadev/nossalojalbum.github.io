@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Álbuns — Meu Google Photos</title>
+  <title>Nossa Loja Veículos - Fotos</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -78,16 +78,31 @@
   }
 
   a.button {
+    color: #ffffff;
+    background-color: #e40303;
     width: 100%;
     text-align: center;
     margin-top: 0;
     box-sizing: border-box;
   }
+  header {
+  text-align: center; /* Centraliza a logo */
+  padding: 20px 0;    /* Adiciona um espaçamento acima e abaixo */
+  margin-bottom: 20px; /* Adiciona uma margem para separar do título "Álbuns" */
+}
+
+.logo {
+  max-width: 400px;  /* Define  uma largura máxima para a logo */
+  height: auto;      /* Mantém a proporção da imagem */
+}
 }
   </style>
 </head>
 <body>
-  <h1>Álbuns</h1>
+  <header>
+  <img src=" fotosVeiculos/logonossaLoja.png" alt="Logo da Loja" class="logo">
+</header>
+  <h1>Galeria de fotos</h1>
   <p>Abra qualquer álbum clicando no botão abaixo.</p>
   <ul>
     <li>
@@ -123,12 +138,20 @@
       <a class="button" href="https://photos.app.goo.gl/2vC2iMQXjJtUTWPo6" target="_blank" rel="noopener">Abrir álbum</a>
     </li>
     <li>
-      <img class="thumb" src="fotosVeiculos/prisma2012/image.png" alt="Álbum 2">
+      <img class="thumb" src="fotosVeiculos/siena2010/image.png" alt="Álbum 2">
       <div class="info">
         <strong>SIENA - 2010</strong><br>
         <small>Descrição curta</small>
       </div>
-      <a class="button" href="https://photos.app.goo.gl/2vC2iMQXjJtUTWPo6" target="_blank" rel="noopener">Abrir álbum</a>
+      <a class="button" href="https://photos.app.goo.gl/JehjAtsNr5b6X5ycA" target="_blank" rel="noopener">Abrir álbum</a>
+    </li>
+        <li>
+      <img class="thumb" src="fotosVeiculos/fiatPulse2022/image.png" alt="Álbum 2">
+      <div class="info">
+        <strong>FIAT PULSE - 2022</strong><br>
+        <small>Descrição curta</small>
+      </div>
+      <a class="button" href="https://photos.app.goo.gl/ydzh74RuVsLhQ78S8" target="_blank" rel="noopener">Abrir álbum</a>
     </li>
     <!-- adicione mais li para outros álbuns. -->
   </ul>
