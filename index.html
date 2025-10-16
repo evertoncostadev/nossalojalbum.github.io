@@ -15,6 +15,18 @@
     h1 { text-align: center; }
     p { text-align: center; color: #555; }
 
+    /* ESTILOS GLOBAIS (DESKTOP E MOBILE) */
+    header {
+      text-align: center; /* Centraliza a logo em TODAS as telas */
+      padding: 20px;      /* Adiciona um espaçamento */
+      margin-bottom: 20px;/* Adiciona uma margem para separar do título */
+    }
+
+    .logo {
+      max-width: 100%; /* A logo se ajusta à largura */
+      height: auto;     /* Mantém a proporção da imagem */
+    }
+
     ul { list-style: none; padding: 0; display: grid; grid-gap: 20px; }
     li {
       background: #fff;
@@ -52,111 +64,92 @@
     }
     a.button:hover { background: #eee; }
 
-  
-   @media (max-width: 600px) {
-  ul {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
+   
+    /* APENAS PARA TELAS PEQUENAS (max-width: 600px) */
+    @media (max-width: 600px) {
+      body {
+        padding: 15px; /* Reduz o padding geral no celular */
+      }
+      ul {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
 
-  li {
-    flex-direction: column;
-    align-items: flex-start;
-    box-sizing: border-box;
-  }
+      li {
+        flex-direction: column; /* Itens ficam em coluna */
+        align-items: flex-start;
+        box-sizing: border-box;
+      }
 
-  .info {
-    width: 100%;
-    margin-bottom: 15px;
-    flex: none;
-  }
+      .info {
+        width: 100%;
+        margin-bottom: 15px;
+        flex: none;
+      }
 
-  .thumb {
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-  }
+      .thumb {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+      }
 
-  a.button {
-    color: #ffffff;
-    background-color: #e40303;
-    width: 100%;
-    text-align: center;
-    margin-top: 0;
-    box-sizing: border-box;
-  }
-  header {
-  text-align: center; /* Centraliza a logo */
-  padding: 20px;    /* Adiciona um espaçamento acima e abaixo */
-  margin-bottom: 20px; /* Adiciona uma margem para separar do título "Álbuns" */
-}
-
-.logo {
-  max-width: 100%; /* A logo ocupará no máximo 60% da largura da tela */
-  height: auto;   /* Isso mantém a proporção da imagem correta */
-}
-body {
-  padding: 15px; /* Reduz o padding geral no celular */
-}
-}
+      /* Botão fica vermelho e com 100% de largura no mobile */
+      a.button {
+        color: #ffffff;
+        background-color: #e40303;
+        width: 100%;
+        text-align: center;
+        margin-top: 0;
+        box-sizing: border-box;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
-  <img src=" fotosVeiculos/logonossaLoja.png" alt="Logo da Loja" class="logo">
-</header>
+    <img src=" fotosVeiculos/logonossaLoja.png" alt="Logo da Loja" class="logo">
+  </header>
+  
   <h1>Galeria de fotos</h1>
   <p>Abra qualquer álbum clicando no botão abaixo.</p>
-  <ul>
-    <li>
-      <img class="thumb" src="fotosVeiculos/creta2018/image.png" alt="Álbum 2">
-      <div class="info">
-        <strong>CRETA - 2018</strong><br>
-        <small>Descrição curta</small>
-      </div>
-      <a class="button" href="https://photos.app.goo.gl/DgA53LmTPLAt5rtU9" target="_blank" rel="noopener">Abrir álbum</a>
-    </li>
-    <li>
-      <img class="thumb" src="fotosVeiculos/nivus2024/image.png" alt="Álbum 2">
-      <div class="info">
-        <strong>NIVUS - 2024</strong><br>
-        <small>Descrição curta</small>
-      </div>
-      <a class="button" href="https://photos.app.goo.gl/61MUcKnjrt19aeuf7" target="_blank" rel="noopener">Abrir álbum</a>
-    </li>
-        <li>
-      <img class="thumb" src="fotosVeiculos/newFiesta2019/image.png" alt="Álbum 2">
-      <div class="info">
-        <strong>NEW FIESTA - 2019</strong><br>
-        <small>Descrição curta</small>
-      </div>
-      <a class="button" href="https://photos.app.goo.gl/h8gvtsgHmtk4wGKd7" target="_blank" rel="noopener">Abrir álbum</a>
-    </li>
-    <li>
-      <img class="thumb" src="fotosVeiculos/prisma2012/image.png" alt="Álbum 2">
-      <div class="info">
-        <strong>PRISMA - 2012</strong><br>
-        <small>Descrição curta</small>
-      </div>
-      <a class="button" href="https://photos.app.goo.gl/2vC2iMQXjJtUTWPo6" target="_blank" rel="noopener">Abrir álbum</a>
-    </li>
-    <li>
-      <img class="thumb" src="fotosVeiculos/siena2010/image.png" alt="Álbum 2">
-      <div class="info">
-        <strong>SIENA - 2010</strong><br>
-        <small>Descrição curta</small>
-      </div>
-      <a class="button" href="https://photos.app.goo.gl/JehjAtsNr5b6X5ycA" target="_blank" rel="noopener">Abrir álbum</a>
-    </li>
-        <li>
-      <img class="thumb" src="fotosVeiculos/fiatPulse2022/image.png" alt="Álbum 2">
-      <div class="info">
-        <strong>FIAT PULSE - 2022</strong><br>
-        <small>Descrição curta</small>
-      </div>
-      <a class="button" href="https://photos.app.goo.gl/ydzh74RuVsLhQ78S8" target="_blank" rel="noopener">Abrir álbum</a>
-    </li>
-    <!-- adicione mais li para outros álbuns. -->
-  </ul>
+  
+  <ul id="album-list">
+    </ul>
+
+  <script>
+    async function carregarVeiculos() {
+      const albumList = document.getElementById('album-list');
+      
+      try {
+        const response = await fetch('veiculos.json');
+        const veiculos = await response.json();
+        
+        albumList.innerHTML = '';
+
+        veiculos.forEach(veiculo => {
+          const imagePath = `fotosVeiculos/${veiculo.pasta}/image.png`;
+          
+          const itemHtml = `
+            <li>
+              <img class="thumb" src="${imagePath}" alt="${veiculo.nome}">
+              <div class="info">
+                <strong>${veiculo.nome}</strong><br>
+                <small>${veiculo.descricao}</small>
+              </div>
+              <a class="button" href="${veiculo.link}" target="_blank" rel="noopener">Abrir álbum</a>
+            </li>
+          `;
+          
+          albumList.insertAdjacentHTML('beforeend', itemHtml);
+        });
+
+      } catch (error) {
+        console.error('Erro ao carregar os veículos:', error);
+        albumList.innerHTML = '<li><p>Não foi possível carregar a galeria de veículos.</p></li>';
+      }
+    }
+
+    carregarVeiculos();
+  </script>
 </body>
 </html>
