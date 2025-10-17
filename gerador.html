@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Gerador de Código para Veículos</title>
+  <style>
+    body { 
+      font-family: Arial, sans-serif; 
+      max-width: 600px; 
+      margin: 40px auto; 
+      padding: 20px;
+      background-color: #f4f4f4;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    h1 { text-align: center; color: #333; }
+    div { margin-bottom: 15px; }
+    label { 
+      display: block; 
+      margin-bottom: 5px; 
+      font-weight: bold; 
+      color: #555;
+    }
+    input[type="text"], input[type="url"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 4px;
+      background-color: #28a745;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover { background-color: #218838; }
+    textarea {
+      width: 100%;
+      height: 150px;
+      padding: 10px;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-family: monospace;
+      white-space: pre;
+      background-color: #e9ecef;
+    }
+    #area-resultado { margin-top: 20px; }
+    small { color: #666; }
+  </style>
+</head>
+<body>
+
+  <h1>Gerador de Código de Veículo</h1>
+
+  <form id="form-gerador">
+    <div>
+      <label for="nome-veiculo">Nome do Veículo (Ex: GOL - 2023)</label>
+      <input type="text" id="nome-veiculo" required>
+    </div>
+    <div>
+      <label for="nome-pasta">Nome da Pasta de Fotos (Ex: gol2023)</label>
+      <input type="text" id="nome-pasta" required>
+    </div>
+    <div>
+      <label for="descricao">Descrição Curta</label>
+      <input type="text" id="descricao" value="Descrição curta" required>
+    </div>
+    <div>
+      <label for="link-album">Link do Álbum (Google Fotos)</label>
+      <input type="url" id="link-album" required>
+    </div>
+    <button type="submit">Gerar Código</button>
+  </form>
+
+  <div id="area-resultado" style="display:none;">
+    <h2>Código Gerado</h2>
+    <p>Copie o bloco de código abaixo e cole no final do seu arquivo <code>veiculos.json</code> (antes do <code>]</code> final).</p>
+    <textarea id="codigo-gerado" readonly></textarea>
+  </div>
+
+  <script>
+    const form = document.getElementById('form-gerador');
+    const areaResultado = document.getElementById('area-resultado');
+    const campoCodigo = document.getElementById('codigo-gerado');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // Impede o recarregamento da página
+
+      const veiculo = {
+        nome: document.getElementById('nome-veiculo').value,
+        pasta: document.getElementById('nome-pasta').value,
+        descricao: document.getElementById('descricao').value,
+        link: document.getElementById('link-album').value,
+      };
+
+      // Converte o objeto para uma string JSON formatada
+      // O 'null, 2' serve para indentar o código e deixá-lo bonito
+      const codigoJSON = JSON.stringify(veiculo, null, 2);
+
+      // Exibe o resultado na tela
+      campoCodigo.value = ',\n' + codigoJSON; // Adiciona a vírgula inicial
+      areaResultado.style.display = 'block';
+    });
+  </script>
+
+</body>
+</html>
